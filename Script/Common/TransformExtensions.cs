@@ -7,11 +7,24 @@ namespace PersonalLibrary.Common
         /// <summary>
         /// Destroy all child gameobjects.
         /// </summary>
-        public static Transform ClearAllChild(this Transform transform)
+        public static Transform DestroyAllChild(this Transform transform)
         {
             foreach (Transform child in transform)
             {
                 Object.Destroy(child.gameObject);
+            }
+            return transform;
+        }
+
+        /// <summary>
+        /// Destroy all child gameobjects in edit mode.
+        /// Destroying an object in edit mode destroys it permanently.
+        /// </summary>
+        public static Transform DestroyImmedeateAllChild(this Transform transform)
+        {
+            while (transform.childCount > 0)
+            {
+                Object.DestroyImmediate(transform.GetChild(0).gameObject);
             }
             return transform;
         }

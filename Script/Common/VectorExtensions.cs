@@ -54,6 +54,14 @@ namespace PersonalLibrary.Common
             vector2.y = y;
             return vector2;
         }
+
+        public static Vector2 Swap(this Vector2 vector2)
+        {
+            var temp = vector2.x;
+            vector2.x = vector2.y;
+            vector2.y = temp;
+            return vector2;
+        }
         #endregion
     }
 }
