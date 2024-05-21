@@ -1,13 +1,13 @@
 using UnityEngine;
 
-namespace PersonalLibrary.Common
+namespace PersonalLibrary.Extensions
 {
     public static class TransformExtensions
     {
         /// <summary>
         /// Destroy all child gameobjects.
         /// </summary>
-        public static Transform DestroyAllChild(this Transform transform)
+        public static Transform DestroyAllChildren(this Transform transform)
         {
             foreach (Transform child in transform)
             {
@@ -20,7 +20,7 @@ namespace PersonalLibrary.Common
         /// Destroy all child gameobjects in edit mode.
         /// Destroying an object in edit mode destroys it permanently.
         /// </summary>
-        public static Transform DestroyImmedeateAllChild(this Transform transform)
+        public static Transform DestroyImmedeateAllChildren(this Transform transform)
         {
             while (transform.childCount > 0)
             {

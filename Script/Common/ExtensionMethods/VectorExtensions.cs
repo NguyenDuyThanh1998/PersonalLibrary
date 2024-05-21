@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace PersonalLibrary.Common
+namespace PersonalLibrary.Extensions
 {
     public static class VectorExtensions
     {
